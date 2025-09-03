@@ -37,5 +37,8 @@ def filter_numbers(numbers, start, end):
     list_range = list()       # The new list that the function returns
     for number in numbers:    # We loop through the list to filter the numbers
         if start <= number <= end:
-            list_range.append(number)
-    return list_range
+            # For each list's number, we check if it is into the range
+            list_range.append(number) # if belongs, we add it to the list
+                                      # that the function returns
+    return list_range          # Finally the function return the list
+                               # with the numbers in the range
