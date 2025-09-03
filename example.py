@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# This code tests the function filter_numbers
+# This code is a usage example of the function filter_numbers
 from filterNumbers import filter_numbers
 
 example_list = [1, 10, 25, 7, 12, 5, 3, 8, 22]           # List with random numbers, the first parameter of the function
