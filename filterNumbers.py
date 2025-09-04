@@ -22,9 +22,12 @@
 #
 
 """
-This file contains the function filter_number. This function filtrates integer
-numbers in a list, returning a new one with the numbers in
-the initial one which are into the range established by the user.
+This file contains the function filter_numbers. This function filtrates integer
+numbers into a list, returning a new list with the numbers in
+the initial one which belongs to the range established by the user.
+
+The list must contain only integer numbers, in other case the function
+will raise an exception.
 """
 
 def filter_numbers(numbers, start, end):
@@ -33,12 +36,19 @@ def filter_numbers(numbers, start, end):
     start is the first number of the range; and the parameter end is the
     last number of the range
     """
-    
+
     list_range = list()       # The new list that the function returns
+
     for number in numbers:    # We loop through the list to filter the numbers
+        if type(numbers) is not int:
+            # For each element in the list, we check if it is an integer number.
+            raise TypeError(Not valid element/s in the list)
+            # If there are elements in the list which are not integer numbers, the function
+            # raises an exception
+
         if start <= number <= end:
             # For each list's number, we check if it is into the range
-            list_range.append(number) # if belongs, we add it to the list
-                                      # that the function returns
-    return list_range          # Finally the function return the list
-                               # with the numbers in the range
+            list_range.append(number) # If the number belongs to the range, we add it to the list that 
+                                      # the function returns (called list_range)
+
+    return list_range        # Finally the function returns the list with the filtrated numbers
